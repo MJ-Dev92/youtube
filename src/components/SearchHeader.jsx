@@ -1,14 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BsSearch, BsYoutube } from "react-icons/bs";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 export default function SearchHeader() {
   const navigate = useNavigate();
+  const { keyword } = useParams();
   const [text, setText] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
     navigate(`videos/${text}`);
   };
+  useEffect(() => {
+    setText(keyword || "");
+  }, [keyword]);
   return (
     <header>
       <Link to="/">
