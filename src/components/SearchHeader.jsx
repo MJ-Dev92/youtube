@@ -17,7 +17,7 @@ export default function SearchHeader() {
     <header>
       <Link to="/">
         <BsYoutube />
-        <h1>Youtube</h1>
+        <h1 className="text-4xl">Youtube</h1>
       </Link>
       <form onSubmit={handleSubmit}>
         <input
