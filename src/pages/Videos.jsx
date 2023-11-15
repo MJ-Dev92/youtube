@@ -15,7 +15,7 @@ export default function Videos() {
   } = useQuery({
     queryKey: ["videos", keyword],
     queryFn: () => {
-      const youtube = new Youtube();
+      const youtube = new FakeYoutube();
       return youtube.search(keyword);
     },
   });
