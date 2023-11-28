@@ -6,10 +6,10 @@ export const YoutubeApiContext = createContext();
 
 const youtube = new FakeYoutube();
 
-export function YoutubeApiProvider({ childeren }) {
+export function YoutubeApiProvider({ children }) {
   return (
     <YoutubeApiContext.Provider value={{ youtube }}>
-      {childeren}
+      {children}
     </YoutubeApiContext.Provider>
   );
 }
