@@ -2,7 +2,6 @@ import React from "react";
 
 export default function VideoCard({ video }) {
   const SP = video.snippet;
-  console.log(SP);
   const UploadYear =
     new Date().getFullYear() - new Date(SP.publishedAt).getFullYear();
   const UploadMonth =
@@ -18,11 +17,17 @@ export default function VideoCard({ video }) {
     }
   };
   return (
-    <>
-      <img src={SP.thumbnails.default.url} alt="Thumbnails" />
-      <div>{SP.title}</div>
-      <div>{SP.channelTitle}</div>
-      <div>{today()}</div>
-    </>
+    <div className="inline-flex mr-2">
+      <div className="w-[250px] h-[150]">
+        <img
+          className="w-[250px] h-[200]"
+          src={SP.thumbnails.default.url}
+          alt="Thumbnails"
+        />
+        <div className="">{SP.title}</div>
+        <div className="">{SP.channelTitle}</div>
+        <div className="">{today()}</div>
+      </div>
+    </div>
   );
 }
