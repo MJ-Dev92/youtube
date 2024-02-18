@@ -1,12 +1,11 @@
 import React from "react";
-import { useParams } from "react-router-dom";
-import { useQuery } from "@tanstack/react-query";
-import { useYoutubeApi } from "../context/YoutubeApiContext";
+import { useLocation } from "react-router-dom";
 
-export default function VideoDetail({ title }) {
-  const keyword = useParams();
-  const { youtube } = useYoutubeApi();
+export default function VideoDetail() {
+  const {
+    state: { video },
+  } = useLocation();
 
-  console.log(title);
+  console.log(video);
   return <div>VideoDetail</div>;
 }
