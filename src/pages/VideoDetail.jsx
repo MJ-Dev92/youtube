@@ -22,7 +22,7 @@ export default function VideoDetail() {
         ></iframe>
         <div>
           <h2>{title}</h2>
-          <ChannelInfo id={channelId} name={channelTitle} />
+          <ChannelInfo id={channelId} name={channelTitle} video={video} />
           <pre>{description}</pre>
         </div>
       </article>

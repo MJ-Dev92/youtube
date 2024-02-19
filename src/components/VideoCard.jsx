@@ -8,7 +8,9 @@ export default function VideoCard({ video }) {
 
   return (
     <li
-      onClick={() => navigate(`videos/watch/${video.id}`, { state: { video } })}
+      onClick={() =>
+        navigate(`/videos/watch/${video.id}`, { state: { video } })
+      }
     >
       <img
         className="w-full lg:hover:scale-110 transition-transform ease-in-out duration-300"
