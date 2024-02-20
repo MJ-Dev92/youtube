@@ -10,9 +10,11 @@ export default function SearchHeader() {
     e.preventDefault();
     navigate(`videos/${text}`);
   };
+
   useEffect(() => {
     setText(keyword || "");
   }, [keyword]);
+
   return (
     <header className="w-full flex p-4 text-2xl border-b border-zinc-600 mb-4">
       <Link to="/" className="flex items-center">
